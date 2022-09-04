@@ -28,7 +28,7 @@ const Home = () => {
         </LogoImage>
         <Desc>MBTI를 기반으로 하는 나랑 잘맞는 화장품 찾기!</Desc>
         <Button
-          style={{ fontRamily: 'DalseoHealingBold' }}
+          style={{ fontFamily: 'DalseoHealingBold' }}
           onClick={handleClickButton}
         >
           테스트 시작하기
