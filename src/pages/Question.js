@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ProgressBar, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { createSearchParams, useNavigate } from 'react-router-dom';
 import { QuestionData } from '../assets/data/questiondata';
 
 const Question = () => {
@@ -14,7 +14,6 @@ const Question = () => {
   ]);
 
   const navigate = useNavigate();
-  console.log('totalScore', totalScore);
 
   const handleClickButton = (no, type) => {
     const newScore = totalScore.map(
@@ -26,8 +25,24 @@ const Question = () => {
       // +1을 해주는 이유 : 인덱스는 0부터 시작하니까
       setQuestionNo(questionNo + 1);
     } else {
+      // mbti 도출
+      const mbti = newScore.reduce(
+        (acc, curr) =>
+          // 현재 배열 객체의 score가 2보다 크면 앞의 숫자를 따준다. (0,1)-첫번째 글자 계산 (1,2)-두번째 글자 선택
+          acc +
+          (curr.score >= 2 ? curr.id.substring(0, 1) : curr.id.substring(1, 2)),
+        '', //초기값을 string으로 입력
+      );
+
+      console.log('mbti', mbti);
+
       // 결과 페이지로 이동
-      navigate('/result');
+      navigate({
+        pathname: '/result',
+        search: `?${createSearchParams({
+          mbti: mbti,
+        })}`,
+      });
     }
     setQuestionNo(questionNo + 1);
     // if (type === 'EI') {

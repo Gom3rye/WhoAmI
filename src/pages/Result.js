@@ -3,11 +3,22 @@ import React from 'react';
 import styled from 'styled-components';
 // import PangImage from '../assets/푸루립밤2.JPG';
 import Button from 'react-bootstrap/Button';
-import { useNavigate } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { ResultData } from '../assets/data/resultdata';
 
 const Result = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const mbti = searchParams.get('mbti'); //? 뒤에 있는 값이 mbti니 해당 key값을 입력해주면 된다.
+  // 최종적으로 도출한 결과 객체
+  const [resultData, setResultData] = React.useState({});
+
+  React.useEffect(() => {
+    const result = ResultData.find((s) => s.best === mbti);
+    setResultData(result);
+  }, [mbti]);
+
+  console.log(resultData);
   return (
     <Wrapper>
       <Header>비건 화장품 판결기</Header>
@@ -15,14 +26,14 @@ const Result = () => {
         <Title>결과 보기</Title>
         <LogoImage>
           <img
-            src={ResultData[0].image}
-            className="round-circle"
+            src={resultData.image}
+            className="rounded-circle"
             width={350}
             height={350}
           />
         </LogoImage>
         <Desc>
-          내 안의 잼민이와 찰떡궁합인 화장품은 {ResultData[0].name}입니다.
+          내 안의 잼민이와 찰떡궁합인 화장품은 {resultData.name}입니다.
         </Desc>
         <Button
           style={{ fontFamily: 'DalseoHealingBold' }}

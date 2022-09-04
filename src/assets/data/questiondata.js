@@ -88,7 +88,7 @@ export const QuestionData = [
     id: 12,
     title: '어떤 방학 계획표로 쓰지?',
     answera: '(원형 그래프에 3분할..잠, 놀기, 먹기)',
-    answerb: '(원형 그래프에 뺵뺵한 스케쥴)',
+    answerb: '(원형 그래프에 빽빽한 스케쥴)',
     type: 'JP',
   },
 ];
