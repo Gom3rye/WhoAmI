@@ -1,0 +1,8 @@
+.App {
+  font-family: 'DalseoHealingBold';
+}
+
+@font-face {
+  font-family: 'DalseoHealingBold';
+  src: url(/src/assets/fonts/DalseoHealingBold.ttf);
+}

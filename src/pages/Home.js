@@ -3,8 +3,16 @@ import React from 'react';
 import styled from 'styled-components';
 import PangImage from '../assets/푸루립밤2.JPG';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleClickButton = () => {
+    // 이전에는 useHistory라는 Hooks를 써서 진행했지만 최근에는 react router dom이 업그레이드 하면서 useNavigate 사용
+    navigate('/question');
+  };
+
   return (
     <Wrapper>
       <Header>비건 화장품 판결기</Header>
@@ -19,7 +27,12 @@ const Home = () => {
           />
         </LogoImage>
         <Desc>MBTI를 기반으로 하는 나랑 잘맞는 화장품 찾기!</Desc>
-        <Button>테스트 시작하기</Button>
+        <Button
+          style={{ fontRamily: 'DalseoHealingBold' }}
+          onClick={handleClickButton}
+        >
+          테스트 시작하기
+        </Button>
       </Contents>
     </Wrapper>
   );
@@ -37,6 +50,7 @@ const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'DalseoHealingBold';
 `;
 
 const Contents = styled.div`
@@ -44,6 +58,7 @@ const Contents = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'DalseoHealingBold';
 `;
 
 const Title = styled.div`
