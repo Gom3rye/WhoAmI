@@ -28,7 +28,7 @@ export const QuestionData = [
       '놀이공원에서 미키마우스하고 사진 찍었다! 너무 귀여웠다. 햄스터 기르고 싶다. 햄스터 이름은 푸딩이로 해야지.',
     answerb:
       '주말에 놀이공원에 갔다. 신밧드 모험 타고 츄러스 먹었다. 엄마 아빠랑 같이 사진도 찍었다. 재밌었다.',
-    type: 'NS',
+    type: 'SN',
   },
   {
     id: 5,
@@ -36,7 +36,7 @@ export const QuestionData = [
     answera:
       '풍선타고 날아보고 싶다! 지나가버린 어린시절엔 풍선을타고 날아가는 꿈을 꾸었지~',
     answerb: '풍선 터질 것 같은데? 불기 힘들 것 같아.',
-    type: 'NS',
+    type: 'SN',
   },
   {
     id: 6,
@@ -44,7 +44,7 @@ export const QuestionData = [
     answera:
       '화강? 화석? 공룡? 공룡은 왜 다 죽었지? 공룡을 타고 날 수는 없을까?',
     answerb: '으하함 졸려엉 (하품)',
-    type: 'NS',
+    type: 'SN',
   },
   {
     id: 7,
