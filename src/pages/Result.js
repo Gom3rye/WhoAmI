@@ -26,6 +26,7 @@ const Result = () => {
         <Title>결과 보기</Title>
         <LogoImage>
           <img
+            alt="캠퍼스 블라썸 제품 사진"
             src={resultData.image}
             className="rounded-circle"
             width={350}

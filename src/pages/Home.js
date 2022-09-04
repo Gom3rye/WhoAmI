@@ -1,7 +1,7 @@
 import React from 'react';
 //css-in-js
 import styled from 'styled-components';
-import PangImage from '../assets/푸루립밤2.JPG';
+import PangImage from '../assets/캠블_후엠아이_로.jpg';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,10 +20,11 @@ const Home = () => {
         <Title>나에게 맞는 화장품은?</Title>
         <LogoImage>
           <img
+            alt="CAMPUS BLOSSOM X Who Am I 로고 사진"
             src={PangImage}
             className="round-circle"
-            width={350}
-            height={350}
+            width={1000}
+            height={250}
           />
         </LogoImage>
         <Desc>MBTI를 기반으로 하는 나랑 잘맞는 화장품 찾기!</Desc>
