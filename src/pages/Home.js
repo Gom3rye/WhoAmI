@@ -1,7 +1,7 @@
 import React from 'react';
 //css-in-js
 import styled from 'styled-components';
-import PangImage from '../assets/캠블_후엠아이_로.jpg';
+import PangImage from '../assets/로고.jpg';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
@@ -22,7 +22,6 @@ const Home = () => {
           <img
             alt="CAMPUS BLOSSOM X Who Am I 로고 사진"
             src={PangImage}
-            className="round-circle"
             width={1000}
             height={250}
           />
