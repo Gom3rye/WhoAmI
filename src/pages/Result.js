@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { ResultData } from '../assets/data/resultdata';
+import KakaoShareButton from '../components/KakaoShareButton';
 
 const Result = () => {
   const navigate = useNavigate();
@@ -21,27 +22,51 @@ const Result = () => {
   console.log(resultData);
   return (
     <Wrapper>
-      <Header>비건 화장품 판결기</Header>
+      <Header>과거의 나는...</Header>
       <Contents>
-        <Title>결과 보기</Title>
+        <Title>{resultData.nameR}</Title>
         <LogoImage>
           <img
-            alt="캠퍼스 블라썸 제품 사진"
-            src={resultData.image}
-            className="rounded-circle"
+            alt="결과 사진"
+            src={resultData.imageR}
             width={350}
             height={350}
           />
         </LogoImage>
+        <Desc>{resultData.desc}</Desc>
+        <LogoImage>
+          <img
+            alt="제품 사진"
+            src={resultData.imageP}
+            className="rounded-circle"
+            width={250}
+            height={250}
+            style={{ marginTop: '40px', marginBottom: '50px' }}
+          />
+        </LogoImage>
         <Desc>
-          내 안의 잼민이와 찰떡궁합인 화장품은 {resultData.name}입니다.
+          내 안의 잼민이와 찰떡궁합인 화장품은{' '}
+          <span style={{ fontSize: '20pt', color: 'blue' }}>
+            {resultData.nameP}
+          </span>
+          입니다.
         </Desc>
-        <Button
-          style={{ fontFamily: 'DalseoHealingBold' }}
-          onClick={() => navigate('/')}
-        >
-          테스트 다시하기
-        </Button>
+        <Buttons>
+          <Button
+            style={{
+              fontFamily: 'DalseoHealingBold',
+              padding: '10px',
+              fontSize: '20px',
+              marginTop: '2rem',
+              marginLeft: '0.5rem',
+              marginRight: '0.5rem',
+            }}
+            onClick={() => navigate('/')}
+          >
+            테스트 다시하기
+          </Button>
+          <KakaoShareButton />
+        </Buttons>
       </Contents>
     </Wrapper>
   );
@@ -55,11 +80,12 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.div`
-  font-size: 40pt;
+  font-size: 25pt;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'DalseoHealingBold';
+  margin-top: 20px;
 `;
 
 const Contents = styled.div`
@@ -72,14 +98,21 @@ const Contents = styled.div`
 
 const Title = styled.div`
   font-size: 30pt;
-  margin-top: 40px;
+  color: blue;
 `;
 
 const LogoImage = styled.div`
-  margin-top: 10px;
+  //margin-bottom: 10px;
 `;
 
 const Desc = styled.div`
   font-size: 20pt;
-  margin-top: 20px;
+  width: 50%;
+  text-align: center;
+`;
+
+const Buttons = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

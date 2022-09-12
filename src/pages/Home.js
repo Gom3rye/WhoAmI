@@ -1,7 +1,8 @@
 import React from 'react';
 //css-in-js
 import styled from 'styled-components';
-import PangImage from '../assets/logo.jpg';
+import PangImageA from '../assets/캠블로고.jpg';
+import PangImageB from '../assets/후엠아이로고.png';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,20 +16,38 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <Header>비건 화장품 판결기</Header>
+      <Header>나랑 잘 맞는 화장품은?</Header>
       <Contents>
-        <Title>나에게 맞는 화장품은?</Title>
+        <Title>MBTI를 기반으로 하는 나의 비건 화장품 찾기!</Title>
         <LogoImage>
           <img
-            alt="CAMPUS BLOSSOM X Who Am I 로고 사진"
-            src={PangImage}
-            width={1000}
-            height={250}
+            alt="CAMPUS BLOSSOM 로고 사진"
+            src={PangImageA}
+            width={300}
+            height={150}
+            style={{
+              marginRight: '1.2rem',
+              marginTop: '3rem',
+              marginBottom: '3rem',
+            }}
+          />
+          x
+          <img
+            alt="Who Am I 로고 사진"
+            src={PangImageB}
+            width={350}
+            height={100}
+            style={{
+              marginLeft: '1rem',
+            }}
           />
         </LogoImage>
-        <Desc>MBTI를 기반으로 하는 나랑 잘맞는 화장품 찾기!</Desc>
         <Button
-          style={{ fontFamily: 'DalseoHealingBold' }}
+          style={{
+            fontFamily: 'DalseoHealingBold',
+            padding: '30px',
+            fontSize: '30px',
+          }}
           onClick={handleClickButton}
         >
           테스트 시작하기
@@ -51,6 +70,7 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
   font-family: 'DalseoHealingBold';
+  margin-top: 20px;
 `;
 
 const Contents = styled.div`
@@ -59,18 +79,23 @@ const Contents = styled.div`
   align-items: center;
   flex-direction: column;
   font-family: 'DalseoHealingBold';
-`;
-
-const Title = styled.div`
-  font-size: 30pt;
-  margin-top: 40px;
-`;
-
-const LogoImage = styled.div`
   margin-top: 10px;
 `;
 
-const Desc = styled.div`
-  font-size: 20pt;
+const Title = styled.div`
+  font-size: 30px;
   margin-top: 20px;
+  width: 50%;
+  text-align: center;
+  color: blue;
+`;
+
+const LogoImage = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 100px;
+  color: red;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `;

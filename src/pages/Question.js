@@ -73,13 +73,20 @@ const Question = () => {
         striped
         variant="danger"
         now={(questionNo / QuestionData.length) * 100} // %로 움직이기 때문에 *100 해주기!
-        style={{ marginTop: '20px' }}
+        style={{
+          marginTop: '70px',
+          height: '4%',
+        }}
       />
       <Title>{QuestionData[questionNo].title}</Title>
       <ButtonGroup>
         <Button
           onClick={() => handleClickButton(1, QuestionData[questionNo].type)}
-          style={{ width: '40%', minHeight: '200px', fontSize: '15pt' }}
+          style={{
+            width: '40%',
+            minHeight: '250px',
+            fontSize: '20pt',
+          }}
         >
           {QuestionData[questionNo].answera}
         </Button>
@@ -87,8 +94,8 @@ const Question = () => {
           onClick={() => handleClickButton(0, QuestionData[questionNo].type)}
           style={{
             width: '40%',
-            minHeight: '200px',
-            fontSize: '15pt',
+            minHeight: '250px',
+            fontSize: '20pt',
             marginLeft: '20px',
           }}
         >
@@ -110,6 +117,7 @@ const Title = styled.div`
   font-size: 30pt;
   text-align: center;
   font-family: 'DalseoHealingBold';
+  margin-top: 50px;
 `;
 
 const ButtonGroup = styled.div`
@@ -118,4 +126,5 @@ const ButtonGroup = styled.div`
   align-items: center;
   justify-content: center;
   font-family: 'DalseoHealingBold';
+  margin-top: 60px;
 `;
