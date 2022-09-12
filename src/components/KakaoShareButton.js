@@ -19,7 +19,7 @@ const KakaoShareButton = ({ data }) => {
       objectType: 'feed',
       content: {
         title: '나랑 잘 맞는 화장품 결과',
-        description: `나의 비건 화장품은 ${data.name}입니다.`,
+        description: `나의 비건 화장품은 ${data.nameP}입니다.`,
         imageUrl: url + data.image,
         link: {
           mobileWebUrl: resultUrl,

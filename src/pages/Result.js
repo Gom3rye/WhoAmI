@@ -102,12 +102,14 @@ const Title = styled.div`
 `;
 
 const LogoImage = styled.div`
-  //margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Desc = styled.div`
   font-size: 20pt;
-  width: 50%;
+  width: 90%;
   text-align: center;
 `;
 
@@ -115,4 +117,5 @@ const Buttons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 `;
