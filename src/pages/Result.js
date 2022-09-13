@@ -39,19 +39,20 @@ const Result = () => {
         <span style={{ fontSize: '22pt', color: 'blue', marginBottom: '10px' }}>
           나는 이런 어린이였어요!
         </span>
-        <Desc>
+        <Desc style={{ fontSize: '16pt' }}>
           {resultData.desc && resultData.desc.map((desc) => <li>{desc}</li>)}
         </Desc>
         <span
           style={{
-            fontSize: '20pt',
+            fontSize: '22pt',
             color: 'blue',
             marginTop: '15px',
+            marginBottom: '15px',
             textAlign: 'center',
             width: '90vw',
           }}
         >
-          과거의 나로 돌아가고 싶다면?
+          과거로 돌아가고 싶다면?
         </span>
         <LogoImage>
           <img
@@ -65,10 +66,8 @@ const Result = () => {
         </LogoImage>
         <Desc style={{ textAlign: 'center' }}>
           내 안의 잼민이와 찰떡궁합인 화장품{' '}
-          <span style={{ fontSize: '20pt', color: '#4ec7a9' }}>
-            {resultData.nameP}
-          </span>
-          을 스스로에게 선물해보세요!
+          <span style={{ color: '#4ec7a9' }}>{resultData.nameP}</span>을
+          스스로에게 선물해보세요!
         </Desc>
         <Button
           style={{
