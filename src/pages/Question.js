@@ -84,8 +84,9 @@ const Question = () => {
           onClick={() => handleClickButton(1, QuestionData[questionNo].type)}
           style={{
             width: '40%',
-            minHeight: '250px',
-            fontSize: '20pt',
+            //minHeight: '250px',
+            height: '330px',
+            fontSize: '16pt',
           }}
         >
           {QuestionData[questionNo].answera}
@@ -94,9 +95,9 @@ const Question = () => {
           onClick={() => handleClickButton(0, QuestionData[questionNo].type)}
           style={{
             width: '40%',
-            minHeight: '250px',
-            fontSize: '20pt',
-            marginLeft: '20px',
+            //minHeight: '250px',
+            height: '330px',
+            fontSize: '16pt',
           }}
         >
           {QuestionData[questionNo].answerb}
@@ -110,21 +111,24 @@ export default Question;
 
 const Wrapper = styled.div`
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 `;
 
 const Title = styled.div`
-  font-size: 30pt;
+  font-size: 22pt;
   text-align: center;
   font-family: 'DalseoHealingBold';
   margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-family: 'DalseoHealingBold';
   margin-top: 60px;
+  margin-bottom: 60px;
 `;

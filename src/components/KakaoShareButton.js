@@ -44,10 +44,12 @@ const KakaoShareButton = ({ data }) => {
       style={{
         fontFamily: 'DalseoHealingBold',
         padding: '10px',
-        fontSize: '20px',
-        marginTop: '2rem',
+        fontSize: '13pt',
+        marginTop: '1rem',
         marginLeft: '0.5rem',
         marginRight: '0.5rem',
+        justifyContent: 'space-around',
+        backgroundColor: '#4ec7a9',
       }}
     >
       카카오톡 공유하기

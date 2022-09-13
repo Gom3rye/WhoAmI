@@ -1,10 +1,10 @@
 import React from 'react';
 //css-in-js
 import styled from 'styled-components';
-import PangImageA from '../assets/캠블로고.jpg';
-import PangImageB from '../assets/후엠아이로고.png';
+import PangImage from '../assets/놀이터.png';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
+//import { Mobile, PC } from '.././components/MediaQuery';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -16,42 +16,34 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <Header>나랑 잘 맞는 화장품은?</Header>
+      <Header>나의 잼민이 MBTI 테스트</Header>
       <Contents>
-        <Title>MBTI를 기반으로 하는 나의 비건 화장품 찾기!</Title>
         <LogoImage>
           <img
-            alt="CAMPUS BLOSSOM 로고 사진"
-            src={PangImageA}
-            width={300}
-            height={150}
+            alt="잼민이 토끼 사진"
+            src={PangImage}
+            width={'85%'}
             style={{
-              marginRight: '1.2rem',
-              marginTop: '3rem',
-              marginBottom: '3rem',
-            }}
-          />
-          x
-          <img
-            alt="Who Am I 로고 사진"
-            src={PangImageB}
-            width={350}
-            height={100}
-            style={{
-              marginLeft: '1rem',
+              marginTop: '1rem',
             }}
           />
         </LogoImage>
+        <Title>
+          초등학생 시절에 나는 어떤 잼민이었을까요? 그때를 떠올려봐요!
+        </Title>
         <Button
           style={{
             fontFamily: 'DalseoHealingBold',
-            padding: '30px',
-            fontSize: '30px',
+            padding: '15px',
+            fontSize: '20px',
+            width: '70%',
+            marginTop: '30px',
           }}
           onClick={handleClickButton}
         >
           테스트 시작하기
         </Button>
+        <Desc>EWHA_WHO AM I X CAMPUS BLOSSOM</Desc>
       </Contents>
     </Wrapper>
   );
@@ -61,16 +53,25 @@ export default Home;
 
 const Wrapper = styled.div`
   height: 100vh;
-  width: 100%;
-`;
-
-const Header = styled.div`
-  font-size: 40pt;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+`;
+
+const Header = styled.div`
+  font-size: 23pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-family: 'DalseoHealingBold';
-  margin-top: 20px;
+
+  position: relative;
+  transform: translateY(0%);
+  //margin-top: 20px;
+  //color: #4ec7a9;
 `;
 
 const Contents = styled.div`
@@ -83,19 +84,25 @@ const Contents = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 30px;
-  margin-top: 20px;
-  width: 50%;
+  font-size: 18px;
+  margin-bottom: 10px;
+  width: 80%;
   text-align: center;
-  color: blue;
 `;
 
 const LogoImage = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: row;
-  font-size: 100px;
-  color: red;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  flex-direction: column;
+  text-align: center;
+`;
+
+const Desc = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  transform: translateY(200%);
+  color: #a0a0a0;
+  //margin-top: 90px;
 `;

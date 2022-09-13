@@ -19,6 +19,8 @@ const Result = () => {
     setResultData(result);
   }, [mbti]);
 
+  // 배열로 설명글 넘겨주기
+  //const listItem = resultData.desc.map((desc) => <li>{desc}</li>);
   console.log(resultData);
   return (
     <Wrapper>
@@ -33,7 +35,24 @@ const Result = () => {
             height={350}
           />
         </LogoImage>
-        <Desc>{resultData.desc}</Desc>
+
+        <span style={{ fontSize: '22pt', color: 'blue', marginBottom: '10px' }}>
+          나는 이런 어린이였어요!
+        </span>
+        <Desc>
+          {resultData.desc && resultData.desc.map((desc) => <li>{desc}</li>)}
+        </Desc>
+        <span
+          style={{
+            fontSize: '20pt',
+            color: 'blue',
+            marginTop: '15px',
+            textAlign: 'center',
+            width: '90vw',
+          }}
+        >
+          과거의 나로 돌아가고 싶다면?
+        </span>
         <LogoImage>
           <img
             alt="제품 사진"
@@ -41,25 +60,42 @@ const Result = () => {
             className="rounded-circle"
             width={250}
             height={250}
-            style={{ marginTop: '40px', marginBottom: '50px' }}
+            style={{ marginTop: '20px', marginBottom: '50px' }}
           />
         </LogoImage>
-        <Desc>
-          내 안의 잼민이와 찰떡궁합인 화장품은{' '}
-          <span style={{ fontSize: '20pt', color: 'blue' }}>
+        <Desc style={{ textAlign: 'center' }}>
+          내 안의 잼민이와 찰떡궁합인 화장품{' '}
+          <span style={{ fontSize: '20pt', color: '#4ec7a9' }}>
             {resultData.nameP}
           </span>
-          입니다.
+          을 스스로에게 선물해보세요!
         </Desc>
+        <Button
+          style={{
+            padding: '10px',
+            fontSize: '20px',
+            marginTop: '2rem',
+            marginLeft: '0.5rem',
+            marginRight: '0.5rem',
+            width: '60%',
+          }}
+          onClick={() => {
+            window.open('https://campusblossom.com/product/', '_blank');
+          }}
+        >
+          제품 사러가기
+        </Button>
         <Buttons>
           <Button
             style={{
               fontFamily: 'DalseoHealingBold',
               padding: '10px',
-              fontSize: '20px',
-              marginTop: '2rem',
+              fontSize: '13pt',
+              marginTop: '1rem',
               marginLeft: '0.5rem',
               marginRight: '0.5rem',
+              justifyContent: 'space-around',
+              backgroundColor: '#4ec7a9',
             }}
             onClick={() => navigate('/')}
           >
@@ -76,11 +112,11 @@ export default Result;
 
 const Wrapper = styled.div`
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 `;
 
 const Header = styled.div`
-  font-size: 25pt;
+  font-size: 23pt;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,8 +133,9 @@ const Contents = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 30pt;
-  color: blue;
+  font-size: 25pt;
+  color: #4ec7a9;
+  text-align: center;
 `;
 
 const LogoImage = styled.div`
@@ -110,7 +147,7 @@ const LogoImage = styled.div`
 const Desc = styled.div`
   font-size: 20pt;
   width: 90%;
-  text-align: center;
+  text-align: start;
 `;
 
 const Buttons = styled.div`
