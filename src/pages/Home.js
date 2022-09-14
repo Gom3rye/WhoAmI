@@ -54,6 +54,7 @@ const Wrapper = styled.div`
   height: 90vh;
   width: 100%;
   flex-direction: column;
+  font-family: 'DalseoHealingBold';
 `;
 
 const Header = styled.div`
@@ -61,13 +62,10 @@ const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  font-family: 'DalseoHealingBold';
 
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
-  //color: #4ec7a9;
 `;
 
 const Contents = styled.div`
@@ -84,7 +82,7 @@ const Title = styled.div`
   margin-bottom: 10px;
   width: 80%;
   text-align: center;
-  font-family: 'DalseoHealingBold';
+  //font-family: 'DalseoHealingBold';
 `;
 
 const LogoImage = styled.div`
