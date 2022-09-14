@@ -50,6 +50,8 @@ const KakaoShareButton = ({ data }) => {
         marginRight: '0.5rem',
         justifyContent: 'space-around',
         backgroundColor: '#4ec7a9',
+        borderColor: '#4ec7a9',
+        color: 'black',
       }}
     >
       카카오톡 공유하기

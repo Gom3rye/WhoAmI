@@ -1,10 +1,10 @@
 import MoisturizingCream from '../두유수분크림2.jpg';
-import SkinPad from '../두유크림스킨패드3.jpg';
+import SkinPad from '../두유크림스킨패드.jpg';
 import LipbamMint from '../립밤 민트 1.jpg';
 import LipbamPeach from '../립밤 피치 1.jpg';
 import MacaronBlack from '../마카롱블랙_복숭아2.jpg';
 import MacaronSunBam from '../마카롱 선밤3.jpg';
-import Sunscreen from '../톤업선크림2.jpg';
+import Sunscreen from '../톤업선크림.png';
 import Nosy from '../정많은 오지라퍼.png';
 import Volunteer from '../봉사부장.png';
 import Youtuber from '../유튜버.png';
@@ -18,7 +18,7 @@ export const ResultData = [
   {
     id: 1,
     nameR: '정많은 오지라퍼 잼민이',
-    nameP: '두유 크림',
+    nameP: '두유 수분 크림',
     best: 'INFP',
     desc: [
       '가끔 엉뚱하고 즉흥적으로 행동해서 선생님이나 부모님을 당황시켰어요.',
@@ -32,7 +32,7 @@ export const ResultData = [
   {
     id: 2,
     nameR: '정많은 오지라퍼 잼민이, ',
-    nameP: '두유 크림',
+    nameP: '두유 수분 크림',
     best: 'ISFP',
     desc: [
       '가끔 엉뚱하고 즉흥적으로 행동해서 선생님이나 부모님을 당황시켰어요.',
@@ -46,7 +46,7 @@ export const ResultData = [
   {
     id: 3,
     nameR: '다정다감 봉사부장 잼민이',
-    nameP: '두유 스킨 패드',
+    nameP: '두유크림 스킨패드',
     best: 'INFJ',
     desc: [
       '내가 할 수 있는 건 스스로 하려고 해요.',
@@ -60,7 +60,7 @@ export const ResultData = [
   {
     id: 4,
     nameR: '다정다감 봉사부장 잼민이',
-    nameP: '두유 스킨 패드',
+    nameP: '두유크림 스킨패드',
     best: 'ISFJ',
     desc: [
       '내가 할 수 있는 건 스스로 하려고 해요.',
@@ -74,7 +74,7 @@ export const ResultData = [
   {
     id: 5,
     nameR: '인싸 유튜버 잼민이',
-    nameP: '두유 스킨 패드',
+    nameP: '두유크림 스킨패드',
     best: 'ESFJ',
     desc: [
       '사람이 너무 좋아요! 많은 친구 사귀는 것도 좋아해요.',
@@ -88,7 +88,7 @@ export const ResultData = [
   {
     id: 6,
     nameR: '인싸 유튜버 잼민이',
-    nameP: '두유 스킨 패드',
+    nameP: '두유크림 스킨패드',
     best: 'ENFJ',
     desc: [
       '사람이 너무 좋아요! 많은 친구 사귀는 것도 좋아해요.',
@@ -214,7 +214,7 @@ export const ResultData = [
   {
     id: 15,
     nameR: '모범생 반장 잼민이',
-    nameP: '다크써클 블랙밤',
+    nameP: '마카롱 블랙 다크서클 톤업밤',
     best: 'ENTJ',
     desc: [
       '나만의 주장이 확고하고 반장으로 나서는 것을 좋아해요. 본투비 리더!',
@@ -228,7 +228,7 @@ export const ResultData = [
   {
     id: 16,
     nameR: '모범생 반장 잼민이',
-    nameP: '다크써클 블랙밤',
+    nameP: '마카롱 블랙 다크서클 톤업밤',
     best: 'ESTJ',
     desc: [
       '나만의 주장이 확고하고 반장으로 나서는 것을 좋아해요. 본투비 리더!',
