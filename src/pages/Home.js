@@ -84,6 +84,7 @@ const Title = styled.div`
   margin-bottom: 10px;
   width: 80%;
   text-align: center;
+  font-family: 'DalseoHealingBold';
 `;
 
 const LogoImage = styled.div`
