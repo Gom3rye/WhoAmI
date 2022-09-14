@@ -22,10 +22,8 @@ const Home = () => {
           <img
             alt="잼민이 토끼 사진"
             src={PangImage}
-            width={'85%'}
-            style={{
-              marginTop: '1rem',
-            }}
+            width={'350'}
+            height={'350'}
           />
         </LogoImage>
         <Title>
@@ -52,11 +50,9 @@ const Home = () => {
 export default Home;
 
 const Wrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 90vh;
+  width: 100%;
   flex-direction: column;
 `;
 
@@ -69,18 +65,18 @@ const Header = styled.div`
   font-family: 'DalseoHealingBold';
 
   position: relative;
-  transform: translateY(0%);
-  //margin-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   //color: #4ec7a9;
 `;
 
 const Contents = styled.div`
+  height: 70vh;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  font-family: 'DalseoHealingBold';
-  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Title = styled.div`
