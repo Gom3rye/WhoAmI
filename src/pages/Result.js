@@ -95,6 +95,8 @@ const Result = () => {
               marginRight: '0.5rem',
               justifyContent: 'space-around',
               backgroundColor: '#4ec7a9',
+              borderColor: '#4ec7a9',
+              color: 'black',
             }}
             onClick={() => navigate('/')}
           >
@@ -110,7 +112,10 @@ const Result = () => {
 export default Result;
 
 const Wrapper = styled.div`
-  height: 100vh;
+  //height: 100vh;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 10px;
   width: 100vw;
 `;
 
